@@ -1,28 +1,20 @@
 \# LangGraph Requirement Coverage Analyzer
 
+LLM(Ollama)과 LangGraph를 사용하여
 
-
-LLM(Ollama)과 LangGraph를 사용하여  
-
-\*\*Requirement ↔ TestCase 매핑이 실제로 요구사항을 충분히 커버하는지\*\*를 분석하고  
+\*\*Requirement ↔ TestCase 매핑이 실제로 요구사항을 충분히 커버하는지\*\*를 분석하고
 
 리포트로 생성하는 프로젝트입니다.
 
-
-
 ---
 
-
-
 \## ✨ 주요 기능
-
-
 
 \- Requirements / TestCases / Mapping 데이터 로드
 
 \- LLM 기반 STRICT 기준 커버리지 평가
 
-&nbsp; - covered / partial / not\_covered / unclear
+&nbsp; - covered / partial / not_covered / unclear
 
 \- Confidence 기반 검토 우선순위 정렬
 
@@ -30,41 +22,31 @@ LLM(Ollama)과 LangGraph를 사용하여
 
 \- Human-in-the-loop CLI 리뷰
 
-&nbsp; - approve / revise\_plan / regenerate\_report
+&nbsp; - approve / revise_plan / regenerate_report
 
 \- Markdown 리포트 자동 생성
 
-
-
 ---
-
-
 
 \## 🧠 아키텍처 개요
 
-
-
-human\_review
+human_review
 
 ↑
 
-generate\_report
+generate_report
 
 ↑
 
-evaluate\_coverage\_llm
+evaluate_coverage_llm
 
 ↑
 
-load\_data
+load_data
 
 ↑
 
-plan\_node
-
-
-
-
+plan_node
 
 \- 각 단계는 LangGraph의 \*\*Node\*\*
 
@@ -72,21 +54,11 @@ plan\_node
 
 \- Human Review를 통해 순환 구조(loop) 지원
 
-
-
 ---
-
-
 
 \## 📂 프로젝트 구조
 
-
-
-
-
-
-
-langgraph\_exmaple/
+langgraph_exmaple/
 
 ├─ data/
 
@@ -94,7 +66,7 @@ langgraph\_exmaple/
 
 │ ├─ testcases.json
 
-│ └─ req\_tc\_mapping.json
+│ └─ req_tc_mapping.json
 
 ├─ outputs/
 
@@ -112,21 +84,17 @@ langgraph\_exmaple/
 
 │ └─ nodes/
 
-│ ├─ plan\_node.py
+│ ├─ plan_node.py
 
-│ ├─ load\_data.py
+│ ├─ load_data.py
 
-│ ├─ evaluate\_coverage\_llm.py
+│ ├─ evaluate_coverage_llm.py
 
-│ ├─ generate\_report.py
+│ ├─ generate_report.py
 
-│ └─ human\_review.py
+│ └─ human_review.py
 
 └─ README.md
-
-
-
-
 
 ---
 
@@ -190,3 +158,4 @@ Requirement 대량 처리(batch)
 
 Web UI 또는 대시보드화
 
+```
